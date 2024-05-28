@@ -1,0 +1,346 @@
+body, html {
+    margin: 0;
+    padding: 0;
+    /*height: 100%;*/
+    font-family: 'Canva Sans', sans-serif;
+    overflow-y: auto; /* Enable vertical scrolling */
+}
+
+.video-container {
+    position: relative;
+    min-height: 100vh; /* Ensure the container fills at least the viewport height */
+    /*overflow: hidden;*/
+}
+
+#video-background {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: -1;
+}
+
+.video-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(203, 180, 95, 0.406); /* Adjust the alpha value (last parameter) for the desired tint intensity */
+    z-index: -1;
+}
+
+.heading-image {
+    width: 1000px; /* Adjust width of the container */
+    height: 200px; /* Adjust height of the container */
+    margin: 100px auto 10px; /* Center the container and add space below */
+    overflow: hidden; /* Hide overflow content */
+    position: relative; /* Ensure proper positioning of the pseudo-element */
+}
+
+.heading-image img {
+    width: 80%; /* Make the image fill its container */
+    height: 120%; /* Make the image fill its container */
+    /*object-fit: cover; /* Ensure the image covers the container */
+}
+
+.heading-box {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(185, 33, 33, 0.5); /* Adjust background color and transparency */
+    border-radius: 60px; /* Adjust border radius for rounded edges */
+    z-index: -1; /* Ensure the background box is behind the image */
+}
+
+/* CSS for the collapsible menu */
+.menu-container {
+    position: fixed;
+    top: 0;
+    left: -200px; /* Initially hide the menu off the screen */
+    width: 200px;
+    height: 100%;
+    background-color: #333;
+    color: #fff;
+    transition: left 0.3s; /* Add transition for smooth animation */
+    overflow-y: auto;
+}
+
+.menu-toggle-container {
+    position: fixed; /* Fixed position */
+    top: 0; /* Align to the top */
+    left: 0; /* Align to the left */
+    z-index: 999; /* Ensure it's above other content */
+    padding: 10px; /* Add padding for spacing */
+}
+  
+.menu-toggle {
+    width: 100%;
+    padding: 10px 20px;
+    background-color: #444; /* Toggle button background color */
+    color: #fff; /* Text color */
+    border: none;
+    cursor: pointer;
+}
+  
+.menu-content {
+    padding: 20px;
+    display: none; /* Initially hidden */
+    transition: transform 0.3s ease; /* Apply transition on transform property */
+    transform: translateX(-100%); /* Initially move the menu off-screen */
+}
+
+.menu-container.open .menu-content {
+    display: block; /* Show the menu content when menu is open */
+    transform: translateX(0); /* Slide the menu content into view */
+}
+  
+.menu-content ul {
+    list-style-type: none;
+    padding: 0;
+}
+  
+.menu-content ul li a {
+    text-decoration: none;
+    color: #fff; /* Menu item text color */
+}
+  
+.menu-content ul li a:hover {
+    color: #ccc; /* Menu item text color on hover */
+}  
+
+.content {
+    position: absolute;
+    top: 30%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    color: #fff;
+}
+
+.content {
+    position: absolute;
+    top: 30%; /* Adjust vertical positioning */
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    color: #F8D473;
+}
+
+
+h1 {
+    font-family: 'Celandine', sans-serif; /* Change font family */
+    font-size: 3em;
+    margin-bottom: 20px;
+    background-color: rgba(207, 75, 75, 0.521); /* Add translucent box */
+    padding: 10px 20px;
+    display: inline-block;
+    border-radius: 10px; /* Add border-radius for rounded corners */
+}
+
+p {
+    font-size: 1.5em;
+    margin-top: 20px;
+    margin-bottom: 10px;
+    color: #fff;
+}
+
+p strong {
+    font-size: 1.5em;
+    display: block;
+    text-align: center;
+    font-weight: bold;
+} 
+
+form {
+    margin-top: 20px;
+}
+
+input[type="file"] {
+    display: none;
+}
+
+.file-input-wrapper {
+    position: relative;
+    display: inline-block;
+    border-radius: 20px; /* Add border-radius for rounded corners */
+    overflow: hidden; /* Ensure content doesn't overflow rounded corners */
+}
+
+button {
+    padding: 15px 25px; /* Increase padding for larger size */
+    background-color: rgba(207, 75, 75, 0.521);
+    color: #010101;
+    border: none;
+    cursor: pointer;
+    font-size: 16px; /* Adjust font size as needed */
+    font-weight: bold; /* Make the text bold */
+}
+
+button:hover {
+    background-color: #F8D473;
+}
+
+/**/
+form {
+    margin-top: 20px;
+}
+
+input[type="file"] {
+    display: none;
+}
+
+.file-input-wrapper {
+    position: relative;
+    display: inline-block;
+    border-radius: 20px; /* Add border-radius for rounded corners */
+    overflow: hidden; /* Ensure content doesn't overflow rounded corners */
+}
+
+button2 {
+    padding: 15px 25px; /* Increase padding for larger size */
+    background-color: rgba(207, 75, 75, 0.521);
+    color: #010101;
+    border: none;
+    cursor: pointer;
+    font-size: 16px; /* Adjust font size as needed */
+    font-weight: bold; /* Make the text bold */
+    margin-top: 100px; /* Add margin to separate from file input */
+}
+
+button:hover {
+    background-color: #F8D473;
+}
+
+
+/* Add styles for the about_us.html page */
+
+/* General styles */
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f5f5f5;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+h1 {
+    text-align: center;
+    margin-bottom: 20px;
+    color: #333;
+}
+
+.team-member {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 40px;
+}
+
+.team-member h2 {
+    font-size: 1.5em;
+    margin-bottom: 10px;
+    color: #333;
+    text-align: center;
+}
+
+.team-member img {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    margin-bottom: 10px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+}
+
+.team-member p {
+    margin-bottom: 10px;
+    color: #666;
+    text-align: center;
+}
+
+.team-member .social-links {
+    display: flex;
+    justify-content: center;
+}
+
+.team-member .social-links a {
+    margin: 0 10px;
+    color: #666;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.team-member .social-links a:hover {
+    color: #333;
+}
+
+.navigation-ribbon {
+    background-color: #5e0303;
+    color: #fff;
+    padding: 10px 20px;
+    text-align: center;
+    position: relative;
+    z-index: 999;
+}
+
+.logo {
+    position: absolute;
+    left: 20px; /* Adjust the left positioning as needed */
+    top: 60%; /* Align the logo vertically */
+    transform: translateY(-50%);
+}
+
+.logo img {
+    height: 70px; /* Adjust the height of the logo as needed */
+    width: auto; /* Maintain aspect ratio */
+}
+
+
+.navigation-ribbon ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.navigation-ribbon ul li {
+    display: inline-block;
+    margin-right: 20px;
+}
+
+.navigation-ribbon ul li:last-child {
+    margin-right: 0;
+}
+
+.navigation-ribbon ul li a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 16px;
+}
+
+.navigation-ribbon ul li a:hover {
+    color: #ccc;
+}
+
+/* Style for the submit button */
+input[type="submit"] {
+    background-color: #4CAF50; /* Green background color */
+    color: white; /* White text color */
+    padding: 10px 20px; /* Padding */
+    border: none; /* No border */
+    border-radius: 5px; /* Rounded corners */
+    cursor: pointer; /* Cursor on hover */
+}
+
+/* Style for the submit button on hover */
+input[type="submit"]:hover {
+    background-color: #45a049; /* Darker green background color */
+}
