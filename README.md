@@ -5,3 +5,5 @@ Automated Lip reading is a use-case for speech recognition through visual interp
 Due to the lack of publicly accessible Hindi language lip-reading datasets, we created our custom dataset consisting of videos of 20 subjects speaking a pre-selected script. 
 On this data, we performed pre-processing and extracted features for model training. Random forest classifier achieved an optimistic training accuracy of 34.125%
 for predicting a sentence consisting of 10 words.
+
+We have used the shape_predictor_68_face_landmarks.dat pre-trained model to get the lip landmarks.
