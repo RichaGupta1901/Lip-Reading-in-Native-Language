@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Us</title>
+    <link
+      rel="stylesheet"
+      href="{{ url_for('static', filename='css/styles.css') }}"
+    />
+</head>
+<body>
+    <h1>Meet Our Team</h1>
+    <div class="rounded-image">
+        <img src="static\images\rounded-image.jpg" alt="Rounded Image">
+    </div>
+    <!-- Team member 1 -->
+    <div class="team-member">
+        <h2>Richa Gupta</h2>
+        <img src="static\images\image.jpg" alt="Member 1">
+        <p>Role: Developer</p>
+        <p>Description: Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla feugiat velit id lorem finibus, nec varius mauris consectetur.</p>
+    </div>
+
+    <!-- Team member 2 -->
+    <div class="team-member">
+        <h2>Vinit Samani</h2>
+        <img src="static\images\image.jpg" alt="Member 2">
+        <p>Role: Designer</p>
+        <p>Description: Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla feugiat velit id lorem finibus, nec varius mauris consectetur.</p>
+    </div>
+
+    <!-- Team member 3 -->
+    <div class="team-member">
+        <h2>Samriddhi Kumari</h2>
+        <img src="static\images\image.jpg" alt="Member 3">
+        <p>Role: Project Manager</p>
+        <p>Description: Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla feugiat velit id lorem finibus, nec varius mauris consectetur.</p>
+    </div>
+
+    <!-- Team member 4 -->
+    <div class="team-member">
+        <h2>Veer Kukreja</h2>
+        <img src="static\images\image.jpg" alt="Member 4">
+        <p>Role: Marketing</p>
+        <p>Description: Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla feugiat velit id lorem finibus, nec varius mauris consectetur.</p>
+    </div>
+    <script src="{{ url_for('static', filename='js/script.js') }}"></script>
+</body>
+</html>
