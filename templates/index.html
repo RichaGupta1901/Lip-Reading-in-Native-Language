@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Shabdsync</title>
+    <link
+      rel="stylesheet"
+      href="{{ url_for('static', filename='css/styles.css') }}"
+    />
+    <style>
+        form {
+            margin-top: 20px;
+        }
+
+        input[type="file"] {
+            display: none;
+        }
+
+        .file-input-wrapper {
+            position: relative;
+            display: inline-block;
+            border-radius: 20px; /* Add border-radius for rounded corners */
+            overflow: hidden; /* Ensure content doesn't overflow rounded corners */
+        }
+
+        button {
+            padding: 15px 25px; /* Increase padding for larger size */
+            background-color: rgba(207, 75, 75, 0.521);
+            color: #010101;
+            border: none;
+            cursor: pointer;
+            font-size: 16px; /* Adjust font size as needed */
+            font-weight: bold; /* Make the text bold */
+            margin-top: 10px; /* Add margin to separate from file input */
+        }
+
+        button:hover {
+            background-color: #F8D473;
+        }
+      </style>
+  </head>
+
+  <body>
+    </div>
+    <div class="navigation-ribbon">
+    <div class="logo">
+        <img src="static\images\shabd-hindi.png" alt="HindiLogo">
+    </div>
+      <ul>
+          <li><a href="#home">Home</a></li>
+          <li><a href="/about">About</a></li>
+          <li><a href="#services">Services</a></li>
+          <li><a href="#contact">Contact</a></li>
+      </ul>
+    </div>
+ 
+  <body>
+    <div class="video-container">
+      <video autoplay muted loop id="video-background">
+        <source
+          src="{{ url_for('static', filename='videos/bg_video2.mp4') }}"
+          type="video/mp4"
+        />
+        Your browser does not support the video tag.
+      </video>
+      <div class="video-overlay"></div>
+      <div class="content">
+        <div class="heading-image">
+          <img
+            src="{{ url_for('static', filename='images/shabd-hindi.png') }}"
+            alt="Shabdsync Logo"
+          />
+          <div class="heading-box"></div>
+        </div>
+        <p>
+          <strong>Breaking Barriers with ShabdSync: Accessible Communication for All!</strong><br>
+          Welcome to ShabdSync! It is a real-time translation and transcription application designed 
+          to make everyday life more accessible for people with hearing impairment 
+          in India by using Lip Reading technology.<br>
+          Upload your video file below⬇️
+        </p>
+        <form id="upload-form" action="/" method="POST" enctype="multipart/form-data">
+          <div class="file-input-wrapper">
+              <button type="button" class="custom-file-input" onclick="document.getElementById('video-input').click();">
+                <span class="custom-file-input-label">Upload File</span>
+              </button>
+              <button type="submit" class="custom-file-input" onclick="document.getElementById('upload-form').click();">
+                  Submit
+              </button>
+              <input type="file" id="video-input" accept="video/*" class="file-input-button-label" name="video-input">
+          </div>
+      </form>
+      <div id="predicted-text">
+        {{pred_text}}
+        </div>
+    </div>
+  </div>
+  <script src="{{ url_for('static', filename='js/script.js') }}"></script>
+  </body>
+</html>
